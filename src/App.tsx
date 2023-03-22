@@ -1,14 +1,15 @@
 import { useEffect, useRef, useState } from "react";
+import { Outlet } from "react-router-dom";
 import styles from "styles/App.module.css";
 
 type imageType = "frame" | "front" | "back" | "";
 
-const url=[
+const url = [
   "https://source.upsplash.com/user/anniespratt/BcGoZXjyPzA",
   "https://source.upsplash.com/user/anniespratt/7MX4Clmx-K0",
   "https://source.upsplash.com/user/enginakyurt/LnBo8a-bHEo",
-  "https://source.upsplash.com/user/terminath0r/s2f7p_q7Xfc"
-]
+  "https://source.upsplash.com/user/terminath0r/s2f7p_q7Xfc",
+];
 
 function App() {
   const [frame, setFrame] = useState<string>("");
@@ -67,7 +68,7 @@ function App() {
         }
         console.log(response.url);
         setIsLoading(false);
-      }, 0);
+      }, 100);
     }
   };
 
@@ -123,6 +124,7 @@ function App() {
 
   return (
     <div className={styles.container}>
+      <Outlet />
       <div
         className={styles.frame}
         style={{ backgroundImage: `url(${frame})` }}
@@ -154,9 +156,24 @@ function App() {
         </div>
       </div>
       <div className={styles.buttonGroup}>
-        <button className={styles.button} onClick={() => getRandomImage("frame")}>배경</button>
-        <button className={styles.button} onClick={() => getRandomImage("front")}>앞면</button>
-        <button className={styles.button} onClick={() => getRandomImage("back")}>뒷면</button>
+        <button
+          className={styles.button}
+          onClick={() => getRandomImage("frame")}
+        >
+          배경
+        </button>
+        <button
+          className={styles.button}
+          onClick={() => getRandomImage("front")}
+        >
+          앞면
+        </button>
+        <button
+          className={styles.button}
+          onClick={() => getRandomImage("back")}
+        >
+          뒷면
+        </button>
       </div>
     </div>
   );
