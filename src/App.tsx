@@ -3,6 +3,13 @@ import styles from "styles/App.module.css";
 
 type imageType = "frame" | "front" | "back" | "";
 
+const url=[
+  "https://source.upsplash.com/user/anniespratt/BcGoZXjyPzA",
+  "https://source.upsplash.com/user/anniespratt/7MX4Clmx-K0",
+  "https://source.upsplash.com/user/enginakyurt/LnBo8a-bHEo",
+  "https://source.upsplash.com/user/terminath0r/s2f7p_q7Xfc"
+]
+
 function App() {
   const [frame, setFrame] = useState<string>("");
   const [front, setFront] = useState<string>("");
@@ -146,10 +153,10 @@ function App() {
           </div>
         </div>
       </div>
-      <div>
-        <button onClick={() => getRandomImage("frame")}>배경</button>
-        <button onClick={() => getRandomImage("front")}>앞면</button>
-        <button onClick={() => getRandomImage("back")}>뒷면</button>
+      <div className={styles.buttonGroup}>
+        <button className={styles.button} onClick={() => getRandomImage("frame")}>배경</button>
+        <button className={styles.button} onClick={() => getRandomImage("front")}>앞면</button>
+        <button className={styles.button} onClick={() => getRandomImage("back")}>뒷면</button>
       </div>
     </div>
   );
