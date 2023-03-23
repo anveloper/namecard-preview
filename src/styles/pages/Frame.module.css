@@ -1,0 +1,46 @@
+.frame {
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 1/1;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.4));
+  background-size: cover;
+  position: relative;
+}
+
+.flip {
+  width: 60%;
+  aspect-ratio: 9/5;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  perspective: 1100px;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  transition: 0.4s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.front,
+.back {
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+.flip:focus .card {
+  transform: rotateY(180deg);
+}
+*:focus {
+  outline: none;
+}
