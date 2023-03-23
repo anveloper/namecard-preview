@@ -8,53 +8,17 @@
   gap: 1rem;
 }
 
-.frame {
+.loading {
   width: 100%;
-  max-width: 40vw;
+  max-width: 600px;
   aspect-ratio: 1/1;
-  box-shadow: 0 0 24px rgba(0, 0, 0, 0.486);
-  background-size: cover;
-  position: relative;
-}
-
-.flip {
-  width: 60%;
-  aspect-ratio: 9/5;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  perspective: 1100px;
-}
-
-.card {
-  width: 100%;
-  height: 100%;
-  transition: 0.4s;
-  transform-style: preserve-3d;
-  box-shadow: 0 0 40px black;
-}
-
-.front,
-.back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-}
-
-/* 
-.front {
-  background: red;
-} */
-
-.back {
-  /* background: royalblue; */
-  transform: rotateY(180deg);
-}
-
-.flip:hover .card {
-  transform: rotateY(180deg);
+  z-index: 10;
+  background-color: rgba(238, 247, 255, 0.719);
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.4));
+  transition: all 0.3s ease-in;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .buttonGroup {
@@ -71,8 +35,8 @@
   aspect-ratio: 2/1;
   background: white;
   border-radius: 0.4rem;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.536);
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.536));
 }
-.button:hover{
+.button:hover {
   cursor: pointer;
 }
