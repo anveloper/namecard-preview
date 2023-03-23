@@ -18,7 +18,7 @@ const Sample = () => {
       }}
     >
       <Canvas camera={{ position: [0, 0, 10], fov: 70 }}>
-        <OrbitControls autoRotate={true} />
+        <OrbitControls autoRotate={true} autoRotateSpeed={10} />
         <pointLight position={[0, 0, 10]} />
         <pointLight position={[0, 0, -10]} />
         <mesh position={[0, 0, 0.01]}>
