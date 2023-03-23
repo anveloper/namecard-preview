@@ -1,0 +1,80 @@
+.mockup {
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 1/1;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.4));
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  transition: all 0.3s ease-in;
+}
+
+.front,
+.back {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60%;
+  aspect-ratio: 9/5;
+  background-size: cover;
+  transition: all 0.3s ease;
+}
+
+.op1f {
+  transform: translate(-60%, -10%);
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.3));
+}
+
+.op1b {
+  transform: translate(-40%, -90%);
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.3));
+}
+
+.op2f {
+  transform: translate(-50%, -5%) rotateX(40deg) rotateZ(30deg);
+  filter: drop-shadow(20px 20px 4px rgba(0, 0, 0, 0.3));
+}
+
+.op2b {
+  transform: translate(-50%, -95%) rotateX(40deg) rotateZ(30deg);
+  filter: drop-shadow(20px 20px 4px rgba(0, 0, 0, 0.3));
+}
+
+.op3f {
+  transform: translate(-60%, -90%) rotateX(30deg) rotateZ(-20deg);
+  filter: drop-shadow(-8px 20px 4px rgba(0, 0, 0, 0.3));
+}
+
+.op3b {
+  transform: translate(-40%, -20%) rotateX(40deg) rotateZ(20deg);
+  filter: drop-shadow(-8px 20px 4px rgba(0, 0, 0, 0.3));
+}
+
+.op4f {
+  transform: translate(-40%, -10%) rotateX(31deg) rotateZ(-21deg);
+  filter: drop-shadow(-8px 20px 4px rgba(0, 0, 0, 0.3));
+}
+
+.op4b {
+  transform: translate(-60%, -90%) rotateX(31deg) rotateZ(-21deg);
+  filter: drop-shadow(-8px 20px 4px rgba(0, 0, 0, 0.3));
+}
+
+.buttonGroup {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttonGroup > svg {
+  font-size: 2rem;
+  opacity: 0.4;
+  transition: all 0.3s ease;
+}
+
+.buttonGroup > svg:hover {
+  opacity: 1;
+  cursor: pointer;
+}
